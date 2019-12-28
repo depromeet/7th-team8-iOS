@@ -1,0 +1,6 @@
+framework module Pods_NoNoPlan {
+  umbrella header "Pods-NoNoPlan-umbrella.h"
+
+  export *
+  module * { export * }
+}
