@@ -8,6 +8,25 @@
 
 import UIKit
 
+extension CardCell: ReusableView, NibLoadableView {}
 class CardCell: UICollectionViewCell {
+    
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupUI() {
+        
+        contentView.backgroundColor = .red
+    }
+    
+    
     
 }
