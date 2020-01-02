@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		42D90FE02B7CDC0BB2B2AD69 /* Pods_NoNoPlan_NoNoPlanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2757363E441AF4FC709BA211 /* Pods_NoNoPlan_NoNoPlanUITests.framework */; };
 		78C559CE482589A2D05F0913 /* Pods_NoNoPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D55205F07A97B20E6F5BDB /* Pods_NoNoPlanTests.framework */; };
+		7B2D3DF923B730F700430866 /* MainViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3DF823B730F700430866 /* MainViewCotroller.swift */; };
+		7B2D3E0023B8EB2300430866 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3DFF23B8EB2300430866 /* CardCell.swift */; };
+		7B2D3E0323B8EB6800430866 /* UICollectionView_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3E0223B8EB6800430866 /* UICollectionView_extension.swift */; };
 		7B8C23D423B728F1009F01E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D323B728F1009F01E1 /* AppDelegate.swift */; };
 		7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */; };
-		7B8C23D823B728F1009F01E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D723B728F1009F01E1 /* ViewController.swift */; };
-		7B8C23DB23B728F1009F01E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C23D923B728F1009F01E1 /* Main.storyboard */; };
 		7B8C23DE23B728F1009F01E1 /* NoNoPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */; };
 		7B8C23E023B728F3009F01E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C23DF23B728F3009F01E1 /* Assets.xcassets */; };
 		7B8C23E323B728F3009F01E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C23E123B728F3009F01E1 /* LaunchScreen.storyboard */; };
@@ -43,11 +44,12 @@
 		1EBAEDCD2FE5182EA5805FAF /* Pods_NoNoPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoNoPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2757363E441AF4FC709BA211 /* Pods_NoNoPlan_NoNoPlanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoNoPlan_NoNoPlanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D223D57E61BAC3CB99139F9 /* Pods-NoNoPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoNoPlan.release.xcconfig"; path = "Target Support Files/Pods-NoNoPlan/Pods-NoNoPlan.release.xcconfig"; sourceTree = "<group>"; };
+		7B2D3DF823B730F700430866 /* MainViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCotroller.swift; sourceTree = "<group>"; };
+		7B2D3DFF23B8EB2300430866 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		7B2D3E0223B8EB6800430866 /* UICollectionView_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView_extension.swift; sourceTree = "<group>"; };
 		7B8C23D023B728F1009F01E1 /* NoNoPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNoPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C23D323B728F1009F01E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B8C23D723B728F1009F01E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7B8C23DA23B728F1009F01E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B8C23DD23B728F1009F01E1 /* NoNoPlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoNoPlan.xcdatamodel; sourceTree = "<group>"; };
 		7B8C23DF23B728F3009F01E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B8C23E223B728F3009F01E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +105,51 @@
 				D53FA7C8C51C3E5F51044E88 /* Pods-NoNoPlanTests.debug.xcconfig */,
 				D4BE7E84C3CA5471D7C02480 /* Pods-NoNoPlanTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7B2D3DF723B7309800430866 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B8C23DF23B728F3009F01E1 /* Assets.xcassets */,
+				7B8C23E123B728F3009F01E1 /* LaunchScreen.storyboard */,
+				7B8C23E423B728F3009F01E1 /* Info.plist */,
+				7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B2D3DFC23B735F100430866 /* mainModule */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D3DFE23B8EAF300430866 /* View */,
+				7B2D3DFD23B8EAE400430866 /* Controller */,
+			);
+			path = mainModule;
+			sourceTree = "<group>";
+		};
+		7B2D3DFD23B8EAE400430866 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D3DF823B730F700430866 /* MainViewCotroller.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7B2D3DFE23B8EAF300430866 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D3DFF23B8EB2300430866 /* CardCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B2D3E0123B8EB3400430866 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D3E0223B8EB6800430866 /* UICollectionView_extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		7B8C23C723B728F1009F01E1 = {
@@ -134,12 +179,9 @@
 			children = (
 				7B8C23D323B728F1009F01E1 /* AppDelegate.swift */,
 				7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */,
-				7B8C23D723B728F1009F01E1 /* ViewController.swift */,
-				7B8C23D923B728F1009F01E1 /* Main.storyboard */,
-				7B8C23DF23B728F3009F01E1 /* Assets.xcassets */,
-				7B8C23E123B728F3009F01E1 /* LaunchScreen.storyboard */,
-				7B8C23E423B728F3009F01E1 /* Info.plist */,
-				7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */,
+				7B2D3E0123B8EB3400430866 /* Extension */,
+				7B2D3DFC23B735F100430866 /* mainModule */,
+				7B2D3DF723B7309800430866 /* Resources */,
 			);
 			path = NoNoPlan;
 			sourceTree = "<group>";
@@ -281,7 +323,6 @@
 			files = (
 				7B8C23E323B728F3009F01E1 /* LaunchScreen.storyboard in Resources */,
 				7B8C23E023B728F3009F01E1 /* Assets.xcassets in Resources */,
-				7B8C23DB23B728F1009F01E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +416,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8C23D823B728F1009F01E1 /* ViewController.swift in Sources */,
+				7B2D3E0023B8EB2300430866 /* CardCell.swift in Sources */,
+				7B2D3DF923B730F700430866 /* MainViewCotroller.swift in Sources */,
 				7B8C23D423B728F1009F01E1 /* AppDelegate.swift in Sources */,
 				7B8C23DE23B728F1009F01E1 /* NoNoPlan.xcdatamodeld in Sources */,
+				7B2D3E0323B8EB6800430866 /* UICollectionView_extension.swift in Sources */,
 				7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,14 +457,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7B8C23D923B728F1009F01E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B8C23DA23B728F1009F01E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7B8C23E123B728F3009F01E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -554,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB46A3BWSY;
-				INFOPLIST_FILE = NoNoPlan/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NoNoPlan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,7 +608,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB46A3BWSY;
-				INFOPLIST_FILE = NoNoPlan/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NoNoPlan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
