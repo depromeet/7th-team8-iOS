@@ -18,22 +18,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         let tabPageViewController = SwipeTabController()
-         let vc1 = MainViewController()
-         let vc2 = UIViewController()
+         let vc1 = UIViewController()
+         let vc2 = MainViewController()
          vc1.view.backgroundColor = .cyan
          vc2.view.backgroundColor = .gray
          let vc3 = UIViewController()
          vc3.view.backgroundColor = .yellow
          
          let vc4 = UIViewController()
-         tabPageViewController.tabItems = [(vc1, "전체"), (vc2, "관광지"),(vc3, "맛집")]
+        
+         tabPageViewController.tabItems = [(vc1, "전체"), (vc2, "관광지"),(vc3, "맛집"), (vc4, "카페")]
          tabPageViewController.option.currentColor = UIColor.black
          tabPageViewController.option.titleColor = .black
-         
-         
+         let nav = UINavigationController(navigationBarClass:UINavigationBar.self,toolbarClass: nil)
+        nav.setViewControllers([tabPageViewController], animated: true)
+        
         if let windowScene = scene as? UIWindowScene {
              let window = UIWindow(windowScene: windowScene)
-             window.rootViewController = tabPageViewController
+             window.rootViewController = HomeViewController()
              self.window = window
              window.makeKeyAndVisible()
          }

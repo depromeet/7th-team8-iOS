@@ -73,9 +73,10 @@ extension CardDetailAnimationTransition: UIViewControllerAnimatedTransitioning {
         let tableViewController = toVC.tabItems.first?.viewController as? MainViewController
         guard let selectedCell = tableViewController?.selectedCell else { return }
         
-        UIView.animate(withDuration: transitonDuration - 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-            let frame = selectedCell.convert(selectedCell.bgBackView.frame, to: toVC.view)
-            fromVC.view.frame = frame
+        UIView.animate(withDuration: transitonDuration - 0.3, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0, options: [], animations: {
+            let point: CGPoint =  .init(x:selectedCell.bgBackView.frame.width - 50,y:selectedCell.bgBackView.frame.height - 50)
+            let frame = selectedCell.convert(point, to: toVC.view)
+            fromVC.view.frame = CGRect(x: frame.x, y: frame.y, width: 20, height: 20)
             fromVC.view.layer.cornerRadius = GlobalConstants.toDayCardCornerRadius
             fromVC.scrollView.imageView.frame.size.width = GlobalConstants.todayCardSize.width
             fromVC.scrollView.imageView.frame.size.height = GlobalConstants.todayCardSize.height

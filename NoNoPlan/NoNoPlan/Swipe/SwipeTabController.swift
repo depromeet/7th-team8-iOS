@@ -14,7 +14,6 @@ class SwipeTabController: UIViewController {
     open var isInfinity: Bool = false
     open var option: TabPageOption = TabPageOption()
     open var tabItems: [(viewController: UIViewController, title: String)] = []
-
     var currentIndex: Int? {
         guard let viewController = pageController.viewControllers?.first else {
             return nil
@@ -32,15 +31,20 @@ class SwipeTabController: UIViewController {
     fileprivate var statusView: UIView?
     fileprivate var statusViewHeightConstraint: NSLayoutConstraint?
     fileprivate var tabBarTopConstraint: NSLayoutConstraint?
-    
+    var navigationBar: UIView? = nil
     override open func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         setupPageViewController()
         setupScrollView()
-        updateNavigationBar()
+        //updateNavigationBar()
+       // self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.sizeToFit()
     }
-
+    override var prefersStatusBarHidden: Bool {
+        
+        return true
+    }
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -51,13 +55,23 @@ class SwipeTabController: UIViewController {
         if let currentIndex = currentIndex , isInfinity {
             tabView.updateCurrentIndex(currentIndex, shouldScroll: true)
         }
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80)
     }
 
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        updateNavigationBar()
+       // updateNavigationBar()
         tabView.layouted = true
+      
+        
+          //Important!
+          
+          //Default NavigationBar Height is 44. Custom NavigationBar Height is 66. So We should set additionalSafeAreaInsets to 66-44 = 22
+         
+              
+            
+          
     }
 
     override open func viewWillDisappear(_ animated: Bool) {
@@ -97,12 +111,31 @@ class SwipeTabController: UIViewController {
     }
     
     fileprivate func updateNavigationBar() {
-           if let navigationBar = navigationController?.navigationBar {
-               navigationBar.shadowImage = UIImage()
-               navigationBar.setBackgroundImage(option.tabBackgroundImage, for: .default)
-               navigationBar.isTranslucent = option.isTranslucent
-           }
+//           if let navigationBar = navigationController?.navigationBar {
+//               navigationBar.shadowImage = UIImage()
+//               navigationBar.setBackgroundImage(option.tabBackgroundImage, for: .default)
+//               navigationBar.isTranslucent = option.isTranslucent
+//           }
+        setUpNavigationBarTitleImage()
        }
+    
+    func setUpNavigationBarTitleImage() {
+
+        let navController = navigationController!
+
+        let image = UIImage(named: "logo")!
+        let imageView = UIImageView(image: image)
+
+        let bannerWidth = navController.navigationBar.frame.size.width
+        let bannerHeight = navController.navigationBar.frame.size.height
+
+        imageView.frame = CGRect(x: 0, y: 150, width: bannerWidth, height: bannerHeight)
+        imageView.contentMode = .scaleAspectFit
+        imageView.center = navController.navigationBar.center
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: 414, height: 300)
+       // navigationItem.title
+        
+    }
     
     fileprivate func configuredTabView() -> TabView {
         let tabView = TabView(isInfinity: isInfinity, option: option)
@@ -117,32 +150,38 @@ class SwipeTabController: UIViewController {
                                         constant: option.tabHeight)
         tabView.addConstraint(height)
         view.addSubview(tabView)
-
-        let top = NSLayoutConstraint(item: tabView,
-                                     attribute: .top,
-                                     relatedBy: .equal,
-                                     toItem: topLayoutGuide,
-                                     attribute: .bottom,
-                                     multiplier:1.0,
-                                     constant: 0.0)
-
-        let left = NSLayoutConstraint(item: tabView,
-                                      attribute: .leading,
-                                      relatedBy: .equal,
-                                      toItem: view,
-                                      attribute: .leading,
-                                      multiplier: 1.0,
-                                      constant: 0.0)
-
-        let right = NSLayoutConstraint(item: view,
-                                       attribute: .trailing,
-                                       relatedBy: .equal,
-                                       toItem: tabView,
-                                       attribute: .trailing,
-                                       multiplier: 1.0,
-                                       constant: 100.0)
-
-        view.addConstraints([top, left, right])
+        guard let naviBar = navigationBar else { return  tabView }
+        tabView.translatesAutoresizingMaskIntoConstraints = false
+        tabView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tabView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        let top =  tabView.topAnchor.constraint(equalTo: view.topAnchor)
+        top.isActive = true
+        tabView.heightAnchor.constraint(equalToConstant: option.tabHeight).isActive = true
+//        let top = NSLayoutConstraint(item: tabView,
+//                                     attribute: .top,
+//                                     relatedBy: .equal,
+//                                     toItem: topLayoutGuide,
+//                                     attribute: .bottom,
+//                                     multiplier:1.0,
+//                                     constant: 144.0)
+//
+//        let left = NSLayoutConstraint(item: tabView,
+//                                      attribute: .leading,
+//                                      relatedBy: .equal,
+//                                      toItem: view,
+//                                      attribute: .leading,
+//                                      multiplier: 1.0,
+//                                      constant: 0.0)
+//
+//        let right = NSLayoutConstraint(item: view,
+//                                       attribute: .trailing,
+//                                       relatedBy: .equal,
+//                                       toItem: tabView,
+//                                       attribute: .trailing,
+//                                       multiplier: 1.0,
+//                                       constant: 100.0)
+//
+//        view.addConstraints([top, left, right])
         
         tabView.pageTabItems = tabItems.map({ $0.title})
         tabView.updateCurrentIndex(pageController.beforeIndex, shouldScroll: true)

@@ -37,22 +37,27 @@ class CardCell: UICollectionViewCell {
     
     private func setupUI() {
         
-        bgBackView.addSubview(bgImageView)
+       // bgBackView.addSubview(bgImageView)
         contentView.addSubview(bgBackView)
-        contentView.addSubview(emptyView)
+       // contentView.addSubview(emptyView)
         
         bgBackView.frame = CGRect(x: GlobalConstants.leftMargin, y: 0, width: GlobalConstants.todayCardSize.width, height: GlobalConstants.todayCardSize.height)
+        bgBackView.addSubview(imageView)
+        imageView.adjustToArea()
+        imageView.image = UIImage(named: "Card")
+        imageView.layer.cornerRadius = 13
+        imageView.layer.masksToBounds = true
         bgBackView.layer.shadowColor = UIColor.black.cgColor
         bgBackView.layer.shadowOpacity = 0.4
         bgBackView.layer.shadowOffset = CGSize(width: 0, height: 1)
-        
-        bgImageView.frame = bgBackView.bounds
-        bgImageView.contentMode = .scaleAspectFill
-        bgImageView.layer.cornerRadius = GlobalConstants.toDayCardCornerRadius
-        bgImageView.layer.masksToBounds = true
-        
-        emptyView.backgroundColor = UIColor.white.withAlphaComponent(0)
-        emptyView.frame = CGRect(x: 0, y: bgImageView.frame.size.height, width: GlobalConstants.todayCardSize.width, height: GlobalConstants.toDayCardRowH - GlobalConstants.todayCardSize.height)
+//
+//        bgImageView.frame = bgBackView.bounds
+//        bgImageView.contentMode = .scaleAspectFill
+//        bgImageView.layer.cornerRadius = GlobalConstants.toDayCardCornerRadius
+//        bgImageView.layer.masksToBounds = true
+//
+//        emptyView.backgroundColor = UIColor.white.withAlphaComponent(0)
+//        emptyView.frame = CGRect(x: 0, y: bgImageView.frame.size.height, width: GlobalConstants.todayCardSize.width, height: GlobalConstants.toDayCardRowH - GlobalConstants.todayCardSize.height)
     }
     
 }

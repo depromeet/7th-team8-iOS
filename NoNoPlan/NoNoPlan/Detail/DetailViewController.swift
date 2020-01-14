@@ -18,10 +18,10 @@ class DetailViewController: UIViewController {
     //the point when start to interactive
     var interactiveStartingPoint: CGPoint? = nil
     
-    var draggingDownToDismiss = true
+   lazy var draggingDownToDismiss = isNotscrolledContent()
     
     let cell: CardCell!
-    
+    var originSize: CGSize = .zero
     private lazy var dismissPanGesture: UIPanGestureRecognizer = {
         let ges = UIPanGestureRecognizer()
         ges.maximumNumberOfTouches = 1
@@ -65,6 +65,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         getImageFromCell()
+        originSize = self.view.frame.size
     }
     
     private func setupUI() {
@@ -82,7 +83,7 @@ class DetailViewController: UIViewController {
     }
     
     private func getImageFromCell() {
-        scrollView.imageView.image = UIImage(named: "Card2")
+        scrollView.imageView.image = UIImage(named: "Card")
     }
     
     @objc private func closeAction() {
@@ -92,6 +93,7 @@ class DetailViewController: UIViewController {
     
     @objc private func handleDismissPan(gesture: UIPanGestureRecognizer) {
         if !draggingDownToDismiss {
+            
             return
         }
         
@@ -110,12 +112,23 @@ class DetailViewController: UIViewController {
         
         var progress = (currentLocation.y - startingPoint.y) / 100
         
+        var progressX = (currentLocation.x - startingPoint.x) / 100
         //prevent viewController bigger when scrolling up
         if currentLocation.y <= startingPoint.y {
             progress = 0
         }
         
+        if currentLocation.x <= startingPoint.x {
+            progressX = 0
+        }
         if progress >= 1.0 {
+            dismiss(animated: true, completion: nil)
+            dismissClosure?()
+            stopDismissPanGesture(gesture)
+            return
+        }
+        
+        if progressX >= 1.0 {
             dismiss(animated: true, completion: nil)
             dismissClosure?()
             stopDismissPanGesture(gesture)
@@ -139,9 +152,9 @@ class DetailViewController: UIViewController {
         }
     }
     
-    //当下拉Offset超过100或取消下拉手势时，执行此方法
+   
     private func stopDismissPanGesture(_ gesture: UIPanGestureRecognizer) {
-        draggingDownToDismiss = false
+        draggingDownToDismiss = isNotscrolledContent()
         interactiveStartingPoint = nil
         scrollView.showsVerticalScrollIndicator = true
         
@@ -150,6 +163,13 @@ class DetailViewController: UIViewController {
         }
     }
     
+    func isNotscrolledContent() -> Bool {
+        if self.scrollView.contentSize.height <= originSize.height {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
@@ -289,7 +309,7 @@ class DetailScrollView: UIScrollView {
 fileprivate let textViewLeftMargin: CGFloat = 20
 fileprivate let textViewTopMargin: CGFloat = 40
 fileprivate let textViewBottomMargin: CGFloat = 50
-fileprivate let textViewText = "일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 "
+fileprivate let textViewText = "일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고"
 
 
 

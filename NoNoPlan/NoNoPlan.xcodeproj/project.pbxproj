@@ -21,6 +21,7 @@
 		7B2D3E1123BE185500430866 /* HorizontalStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3E0C23BE185500430866 /* HorizontalStack.swift */; };
 		7B2D3E1323BE209100430866 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3E1223BE209100430866 /* DetailViewController.swift */; };
 		7B2D3E1623BE24C600430866 /* MainAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3E1523BE24C600430866 /* MainAnimator.swift */; };
+		7B321CC923CCA9F600186BD9 /* UINavigationBar_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B321CC823CCA9F600186BD9 /* UINavigationBar_extension.swift */; };
 		7B35C1DD23C0AB6400667368 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35C1DC23C0AB6400667368 /* MenuController.swift */; };
 		7B3AB5FE23C3860B005C450C /* SwipeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB5F523C38609005C450C /* SwipeTabController.swift */; };
 		7B3AB60023C3860B005C450C /* TabCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB5F723C3860A005C450C /* TabCollectionCell.swift */; };
@@ -29,6 +30,8 @@
 		7B3AB60423C3860B005C450C /* TabPageOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB5FB23C3860A005C450C /* TabPageOption.swift */; };
 		7B3AB60823C388BE005C450C /* TabCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AB60623C388BE005C450C /* TabCollectionCell.xib */; };
 		7B3AB60923C388BE005C450C /* TabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3AB60723C388BE005C450C /* TabView.xib */; };
+		7B5C213323CDCEB100302A2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C213223CDCEB100302A2C /* HomeViewController.swift */; };
+		7B5C213523CDE15200302A2C /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C213423CDE15200302A2C /* HomeNavigationBar.swift */; };
 		7B8C23D423B728F1009F01E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D323B728F1009F01E1 /* AppDelegate.swift */; };
 		7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */; };
 		7B8C23DE23B728F1009F01E1 /* NoNoPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */; };
@@ -74,6 +77,7 @@
 		7B2D3E0C23BE185500430866 /* HorizontalStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalStack.swift; sourceTree = "<group>"; };
 		7B2D3E1223BE209100430866 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7B2D3E1523BE24C600430866 /* MainAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAnimator.swift; sourceTree = "<group>"; };
+		7B321CC823CCA9F600186BD9 /* UINavigationBar_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar_extension.swift; sourceTree = "<group>"; };
 		7B35C1DC23C0AB6400667368 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		7B3AB5F523C38609005C450C /* SwipeTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTabController.swift; sourceTree = "<group>"; };
 		7B3AB5F723C3860A005C450C /* TabCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCollectionCell.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 		7B3AB5FD23C3860A005C450C /* TabPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPageViewController.h; sourceTree = "<group>"; };
 		7B3AB60623C388BE005C450C /* TabCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabCollectionCell.xib; sourceTree = "<group>"; };
 		7B3AB60723C388BE005C450C /* TabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabView.xib; sourceTree = "<group>"; };
+		7B5C213223CDCEB100302A2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7B5C213423CDE15200302A2C /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
 		7B8C23D023B728F1009F01E1 /* NoNoPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNoPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C23D323B728F1009F01E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				7B2D3DF823B730F700430866 /* MainViewCotroller.swift */,
+				7B5C213223CDCEB100302A2C /* HomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -194,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				7B2D3DFF23B8EB2300430866 /* CardCell.swift */,
+				7B5C213423CDE15200302A2C /* HomeNavigationBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,14 +209,10 @@
 		7B2D3E0123B8EB3400430866 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7B2D3E0523BE184600430866 /* UIStackView.swift */,
+				7B321CC723CCA9DE00186BD9 /* kit */,
 				7B2D3E0423BE184600430866 /* UIView.swift */,
 				7B2D3E0223B8EB6800430866 /* UICollectionView_extension.swift */,
-				7B2D3E0C23BE185500430866 /* HorizontalStack.swift */,
-				7B2D3E0B23BE185500430866 /* Image.swift */,
-				7B2D3E0823BE185400430866 /* Spacer.swift */,
-				7B2D3E0923BE185400430866 /* Text.swift */,
-				7B2D3E0A23BE185400430866 /* VerticalStack.swift */,
+				7B321CC823CCA9F600186BD9 /* UINavigationBar_extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -220,6 +224,19 @@
 				7B2D3E1523BE24C600430866 /* MainAnimator.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		7B321CC723CCA9DE00186BD9 /* kit */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D3E0523BE184600430866 /* UIStackView.swift */,
+				7B2D3E0C23BE185500430866 /* HorizontalStack.swift */,
+				7B2D3E0B23BE185500430866 /* Image.swift */,
+				7B2D3E0823BE185400430866 /* Spacer.swift */,
+				7B2D3E0923BE185400430866 /* Text.swift */,
+				7B2D3E0A23BE185400430866 /* VerticalStack.swift */,
+			);
+			name = kit;
 			sourceTree = "<group>";
 		};
 		7B3AB60A23C38EFD005C450C /* Swipe */ = {
@@ -507,12 +524,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5C213523CDE15200302A2C /* HomeNavigationBar.swift in Sources */,
 				7B2D3E0023B8EB2300430866 /* CardCell.swift in Sources */,
 				7B35C1DD23C0AB6400667368 /* MenuController.swift in Sources */,
 				7B2D3E1023BE185500430866 /* Image.swift in Sources */,
 				7B3AB60423C3860B005C450C /* TabPageOption.swift in Sources */,
 				7B2D3DF923B730F700430866 /* MainViewCotroller.swift in Sources */,
 				7B2D3E0F23BE185500430866 /* VerticalStack.swift in Sources */,
+				7B5C213323CDCEB100302A2C /* HomeViewController.swift in Sources */,
 				7B3AB60123C3860B005C450C /* TabPageViewController.swift in Sources */,
 				7B8C23D423B728F1009F01E1 /* AppDelegate.swift in Sources */,
 				7B2D3E0723BE184600430866 /* UIStackView.swift in Sources */,
@@ -524,6 +543,7 @@
 				7B2D3E0E23BE185500430866 /* Text.swift in Sources */,
 				7B8C23DE23B728F1009F01E1 /* NoNoPlan.xcdatamodeld in Sources */,
 				7B3AB60023C3860B005C450C /* TabCollectionCell.swift in Sources */,
+				7B321CC923CCA9F600186BD9 /* UINavigationBar_extension.swift in Sources */,
 				7B3AB5FE23C3860B005C450C /* SwipeTabController.swift in Sources */,
 				7B2D3E0323B8EB6800430866 /* UICollectionView_extension.swift in Sources */,
 				7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */,
