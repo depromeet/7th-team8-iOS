@@ -36,7 +36,14 @@ extension  UIView {
         }
         
         if size.height != 0 {
-            heightAnchor.constraint(equalToConstant: size.height).isActive = true
+        let constraint =  self.constraints.filter{$0.identifier == "size"}.first
+            if let constraint = constraint {
+                constraint.constant = size.height
+            } else {
+             let anchor = heightAnchor.constraint(equalToConstant: size.height)
+                anchor.identifier = "size"
+                anchor.isActive = true
+            }
         }
     }
     
@@ -55,13 +62,23 @@ extension  UIView {
 
 @available(iOS 9.0, *)
 extension UIView {
-    
-    public func frame<T: UIView>(width: CGFloat? = nil, height: CGFloat? = nil) -> T {
-        translatesAutoresizingMaskIntoConstraints = false
-        anchor(padding: .zero, size: CGSize(width: width ?? 0, height: height ?? 0))
-        return self as! T
+    @discardableResult
+    func size(width: CGFloat) -> Self {
+        anchor(padding: .zero, size: CGSize(width: width , height: 0))
+        return self
     }
-    
+    @discardableResult
+    func size(height: CGFloat) -> Self {
+        anchor(padding: .zero, size: CGSize(width: 0 , height: height))
+        return self
+    }
+
+//        public func frame(width: CGFloat = 0, height: CGFloat = 0) -> Self {
+//
+//
+//            return self
+//        }
+//
     @discardableResult
     func withBorder<T: UIView>(width: CGFloat, color: UIColor) -> T {
         layer.borderWidth = width

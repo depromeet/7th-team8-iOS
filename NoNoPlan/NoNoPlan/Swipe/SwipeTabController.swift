@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol SwipeTabDelegate {
+    func didMoveTab(_ index: Int)
+}
+
 class SwipeTabController: UIViewController {
+    var delegate: SwipeTabDelegate?
     let pageController = TabPageViewController()
     lazy fileprivate var tabView: TabView = self.configuredTabView()
     open var isInfinity: Bool = false
@@ -202,7 +207,7 @@ class SwipeTabController: UIViewController {
 extension SwipeTabController {
 
     public func displayControllerWithIndex(_ index: Int, direction: UIPageViewController.NavigationDirection, animated: Bool) {
-
+        
         pageController.beforeIndex = index
         pageController.shouldScrollCurrentBar = false
         let nextViewControllers: [UIViewController] = [tabItems[index].viewController]
@@ -210,6 +215,7 @@ extension SwipeTabController {
         let completion: ((Bool) -> Void) = { [weak self] _ in
             self?.pageController.shouldScrollCurrentBar = true
             self?.pageController.beforeIndex = index
+            self?.delegate?.didMoveTab(index)
         }
 
         pageController.setViewControllers(

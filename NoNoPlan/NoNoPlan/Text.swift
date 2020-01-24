@@ -11,7 +11,7 @@ import UIKit
 
 class Text: UILabel  {
     
-  // public init<S>(_ content: S) where S : StringProtocol
+  
     init<S>(_ content: S) where S: StringProtocol {
         super.init(frame: .zero)
         self.text = content as? String
@@ -22,4 +22,13 @@ class Text: UILabel  {
     }
     
     
+    func fontSize(_ size: CGFloat) -> Self {
+        self.font = UIFont.systemFont(ofSize: size)
+        return self
+    }
+    
+    func fontColor(_ color: UIColor) -> Self {
+        self.textColor = color
+        return self
+    }
 }

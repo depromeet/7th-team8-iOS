@@ -39,6 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              self.window = window
              window.makeKeyAndVisible()
          }
+         UserDefaults.standard.setValue(true, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

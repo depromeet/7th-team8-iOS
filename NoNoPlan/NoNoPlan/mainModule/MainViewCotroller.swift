@@ -8,11 +8,13 @@
 
 import UIKit
 
+
+
 class MainViewController: UIViewController {
     private var expandedCell: CardCell?
     private var isStatusBarHidden = false
     private var hiddenCells: [CardCell] = []
-    
+    var scrollDelegate: HomeScrollDelegate?
     
     let label: UILabel = {
         let label = UILabel(frame: .zero)
@@ -126,6 +128,40 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 30
     }
+}
+
+extension MainViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var direction: ScrollDirection = .down
+        let scrollOffset = scrollView.contentOffset.y
+        let currentOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if (scrollOffset >= 0 && scrollOffset < currentOffset) {
+            // currently, scrrolling..
+            let scrollGesture = scrollView.panGestureRecognizer
+            if scrollGesture.translation(in: scrollView.superview).y > 0 {
+             // scrolling.. to up
+                direction = .up
+            } else {
+                direction = .down
+            //scrolling to down
+            }
+        }
+        
+        scrollDelegate?.scrollDidScroll(scrollView, offset: scrollView.contentOffset.y, direction: direction)
+        
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print("end")
+        scrollDelegate?.scrollDidEnd(scrollView, offset: scrollView.contentOffset.y)
+    }
+    
 }
 
 

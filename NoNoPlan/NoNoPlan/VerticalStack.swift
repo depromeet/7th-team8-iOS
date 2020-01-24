@@ -13,39 +13,46 @@ public enum EdgeInset {
     
 }
 
-struct VerticalStack {
+class VerticalStack: UIStackView {
     
-    var stackView: UIStackView = UIStackView()
     
-    init(alignment: NSLayoutConstraint.Axis = .vertical, spacing: CGFloat? = nil, @ViewArrayBuilder _ content: () -> [UIView]) {
-        stackView = UIStackView(arrangedSubviews: content())
-        stackView.axis = alignment
-        stackView.distribution = .fill
-        stackView.alignment = .fill
-        stackView.spacing = spacing ?? 0
+    
+    convenience init(alignment: NSLayoutConstraint.Axis = .vertical, spacing: CGFloat? = nil, @ViewArrayBuilder _ content: () -> UIStackView) {
+        self.init(arrangedSubviews: content().arrangedSubviews)
+        self.axis = alignment
+        self.distribution = .fill
+        self.alignment = .fill
+        self.spacing = spacing ?? 0.0
+        
     }
     
     @discardableResult
     func build() -> UIStackView {
-        return stackView
+        return self
     }
     
     public func build(on view: UIView) {
-        view.addSubview(stackView)
-        stackView.adjustToArea()
-    } 
+        view.addSubview(self)
+        self.adjustToArea()
+    }
+   
+    
 }
 
 @available(iOS 9.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 @_functionBuilder
 struct ViewArrayBuilder {
     
-    static func buildBlock(_ views: UIView...) -> [UIView] {
+    static func buildBlock(_ views: UIView...) -> UIStackView{
         
-        let array = views.map{
-            return $0
-        }
-        return array
+      
+        return UIStackView(arrangedSubviews: views)
+    }
+    
+    static func buildBlock(_ view: UIView) -> UIStackView {
+        
+      
+        return UIStackView(arrangedSubviews: [view])
     }
 }
 

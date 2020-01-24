@@ -8,29 +8,29 @@
 
 import UIKit
 
-struct HorizontalStack {
+class HorizontalStack: UIStackView {
     
-    var stackView: UIStackView = UIStackView()
     
-    init(alignment: NSLayoutConstraint.Axis = .horizontal, spacing: CGFloat? = nil, @ViewArrayBuilder _ content: () -> [UIView]) {
-        
-        stackView = UIStackView(arrangedSubviews: content())
-        stackView.axis = alignment
-        stackView.distribution = .fill
-        stackView.alignment = .fill
-        stackView.spacing = spacing ?? 0
+    
+    convenience init(axis: NSLayoutConstraint.Axis = .horizontal, alignment: UIStackView.Alignment = .fill, spacing: CGFloat? = nil, @ViewArrayBuilder _ content: () -> UIStackView) {
+        self.init(arrangedSubviews: content().arrangedSubviews)
+        self.axis = axis
+        self.distribution = .fill
+        self.alignment = alignment
+        self.spacing = spacing ?? 0.0
     }
+    
+    
     
     @discardableResult
     func build() -> UIStackView {
-        return stackView
+        return self
     }
     
     public func build(on view: UIView) {
-        view.addSubview(stackView)
-        stackView.adjustToArea()
+        view.addSubview(self)
+        self.adjustToArea()
     }
-    
    
     
 }
