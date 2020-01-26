@@ -15,9 +15,17 @@ protocol Expandable {
 
 extension CardCell: ReusableView, NibLoadableView {}
 class CardCell: UICollectionViewCell {
+    
+    lazy var width: NSLayoutConstraint = {
+        let width = contentView.widthAnchor.constraint(equalToConstant: bounds.size.width)
+        width.isActive = true
+        return width
+    }()
+    
     let bgBackView = UIView()
     let bgImageView = UIImageView()
     let emptyView = UIView()
+    let cardView = CardView()
     private var initialFrame: CGRect?
     private var initialCornerRadius: CGFloat?
     
@@ -29,6 +37,13 @@ class CardCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+    }
+    
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+       // width.constant = bounds.size.width - 20
+        return contentView.systemLayoutSizeFitting(CGSize(width: targetSize.width, height: 1))
     }
     
     required init?(coder: NSCoder) {
@@ -42,22 +57,25 @@ class CardCell: UICollectionViewCell {
        // contentView.addSubview(emptyView)
         
         bgBackView.frame = CGRect(x: GlobalConstants.leftMargin, y: 0, width: GlobalConstants.todayCardSize.width, height: GlobalConstants.todayCardSize.height)
-        bgBackView.addSubview(imageView)
-        imageView.adjustToArea()
-        imageView.image = UIImage(named: "Card")
-        imageView.layer.cornerRadius = 13
-        imageView.layer.masksToBounds = true
+        bgBackView.addSubview(cardView)
+       
+        //imageView.image = UIImage(named: "Card")
+        cardView.backgroundColor = .white
+        cardView.layer.cornerRadius = 13
+        cardView.layer.masksToBounds = true
+        cardView.translatesAutoresizingMaskIntoConstraints = false
+        
+        cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        cardView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         bgBackView.layer.shadowColor = UIColor.black.cgColor
-        bgBackView.layer.shadowOpacity = 0.4
+        bgBackView.layer.shadowOpacity = 0.2
         bgBackView.layer.shadowOffset = CGSize(width: 0, height: 1)
-//
-//        bgImageView.frame = bgBackView.bounds
-//        bgImageView.contentMode = .scaleAspectFill
-//        bgImageView.layer.cornerRadius = GlobalConstants.toDayCardCornerRadius
-//        bgImageView.layer.masksToBounds = true
-//
-//        emptyView.backgroundColor = UIColor.white.withAlphaComponent(0)
-//        emptyView.frame = CGRect(x: 0, y: bgImageView.frame.size.height, width: GlobalConstants.todayCardSize.width, height: GlobalConstants.toDayCardRowH - GlobalConstants.todayCardSize.height)
+        
+        cardView.translatesAutoresizingMaskIntoConstraints = false
+        cardView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width - 20).isActive = true
+
     }
     
 }

@@ -11,6 +11,7 @@ import UIKit
 
 
 class MainViewController: UIViewController {
+     let testText: [String] = ["동백키친", "섭지코지 섭지코지 섭지코지 섭지코지", "청춘부부"]
     private var expandedCell: CardCell?
     private var isStatusBarHidden = false
     private var hiddenCells: [CardCell] = []
@@ -22,9 +23,18 @@ class MainViewController: UIViewController {
         return label
     }()
     
+    var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = .init(top: 20, left: 10, bottom: 0, right: 10)
+        layout.minimumLineSpacing = 30
+        let width = UIScreen.main.bounds.size.width
+        layout.estimatedItemSize = CGSize(width: width - 20, height: 1)
+        return layout
+    }()
+    
     lazy var collectionView: UICollectionView = {
         
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -51,7 +61,8 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = .blue
         label.frame = CGRect(x: view.center.x, y: view.center.y, width: 100, height: 100)
        // view.addSubview(label)
-        
+        view.backgroundColor = UIColor(r: 252, g: 252, b: 252)
+        collectionView.backgroundColor = UIColor(r: 252, g: 252, b: 252)
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -60,6 +71,8 @@ class MainViewController: UIViewController {
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         collectionView.register(CardCell.self)
+        
+        
     }
 }
 
@@ -86,12 +99,16 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
     }
-    
+   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as CardCell
         
-        cell.bgImageView.image = UIImage(named: "Card")
+        if indexPath.row % 2 == 0 {
+            cell.cardView.placeLabel.text = testText[1]
+        } else {
+            cell.cardView.placeLabel.text = testText[2]
+        }
 //        VerticalStack {
 //            Text("\(indexPath.section)")
 //            Text("\(indexPath.row)")
@@ -99,35 +116,35 @@ extension MainViewController: UICollectionViewDataSource {
        // cell.backgroundColor = .purple
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        guard let row = collectionView.cellForItem(at: indexPath) as? CardCell else { return }
-        UIView.animate(withDuration: 0.3) {
-            row.bgBackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        }
-        
-        
-    }
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        guard let row = collectionView.cellForItem(at: indexPath) as? CardCell else { return }
-        UIView.animate(withDuration: 0.3) {
-            row.bgBackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+//        guard let row = collectionView.cellForItem(at: indexPath) as? CardCell else { return }
+//        UIView.animate(withDuration: 0.3) {
+//            row.bgBackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+//        }
+//        
+//        
+//    }
+//    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+//        guard let row = collectionView.cellForItem(at: indexPath) as? CardCell else { return }
+//        UIView.animate(withDuration: 0.3) {
+//            row.bgBackView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+//        }
+//    }
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 400)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 20, left: 10, bottom: 0, right: 10)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 30
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: view.frame.width, height: 400)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return .init(top: 20, left: 10, bottom: 0, right: 10)
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 30
+//    }
 }
 
 extension MainViewController: UIScrollViewDelegate {
