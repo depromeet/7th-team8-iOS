@@ -56,7 +56,7 @@ class CardCell: UICollectionViewCell {
         contentView.addSubview(bgBackView)
        // contentView.addSubview(emptyView)
         
-        bgBackView.frame = CGRect(x: GlobalConstants.leftMargin, y: 0, width: GlobalConstants.todayCardSize.width, height: GlobalConstants.todayCardSize.height)
+        bgBackView.frame = CGRect(x: 0, y: 0, width: kScreenW - 20, height: GlobalConstants.todayCardSize.height)
         bgBackView.addSubview(cardView)
        
         //imageView.image = UIImage(named: "Card")
@@ -72,7 +72,7 @@ class CardCell: UICollectionViewCell {
         bgBackView.layer.shadowColor = UIColor.black.cgColor
         bgBackView.layer.shadowOpacity = 0.2
         bgBackView.layer.shadowOffset = CGSize(width: 0, height: 1)
-        
+        cardView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1).isActive = true
         cardView.translatesAutoresizingMaskIntoConstraints = false
         cardView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width - 20).isActive = true
 

@@ -143,25 +143,44 @@ class SwipeTabController: UIViewController {
     }
     
     fileprivate func configuredTabView() -> TabView {
+        var button = UIButton.init()
+        button.backgroundColor = .red
+        var button2 = UIButton.init()
+        button2.backgroundColor = .blue
         let tabView = TabView(isInfinity: isInfinity, option: option)
         tabView.translatesAutoresizingMaskIntoConstraints = false
-
-        let height = NSLayoutConstraint(item: tabView,
-                                        attribute: .height,
-                                        relatedBy: .equal,
-                                        toItem: nil,
-                                        attribute: .height,
-                                        multiplier: 1.0,
-                                        constant: option.tabHeight)
-        tabView.addConstraint(height)
-        view.addSubview(tabView)
-        guard let naviBar = navigationBar else { return  tabView }
-        tabView.translatesAutoresizingMaskIntoConstraints = false
-        tabView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tabView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        let top =  tabView.topAnchor.constraint(equalTo: view.topAnchor)
+        
+//        let height = NSLayoutConstraint(item: tabView,
+//                                        attribute: .height,
+//                                        relatedBy: .equal,
+//                                        toItem: nil,
+//                                        attribute: .height,
+//                                        multiplier: 1.0,
+//                                        constant: option.tabHeight)
+//        tabView.addConstraint(height)
+//        view.addSubview(tabView)
+//        guard let naviBar = navigationBar else { return  tabView }
+//        tabView.translatesAutoresizingMaskIntoConstraints = false
+//        tabView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        tabView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        let top =  tabView.topAnchor.constraint(equalTo: view.topAnchor)
+//        top.isActive = true
+//        tabView.heightAnchor.constraint(equalToConstant: option.tabHeight).isActive = true
+//        
+      let view2 =  HorizontalStack(spacing: 14) {
+            tabView
+            button.size(width: 40)
+            button2.size(width: 40)
+            Space().size(width: 20)
+            
+        }
+        view2.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(view2)
+        view2.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        view2.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        let top =  view2.topAnchor.constraint(equalTo: view.topAnchor)
         top.isActive = true
-        tabView.heightAnchor.constraint(equalToConstant: option.tabHeight).isActive = true
+        view2.heightAnchor.constraint(equalToConstant: option.tabHeight).isActive = true
 //        let top = NSLayoutConstraint(item: tabView,
 //                                     attribute: .top,
 //                                     relatedBy: .equal,

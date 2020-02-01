@@ -24,12 +24,13 @@ class CardView: UIView {
     let favoriteButton: UIButton = {
         let favorite = UIButton(type: .custom)
         favorite.backgroundColor = .red
+        favorite.setImage(UIImage(named: "bookmark_off"), for: .normal)
         return favorite
     }()
     
     let placeLabel: UILabel = {
         let place = UILabel(frame: .zero)
-        place.text = "동백키친"
+        place.text = "섭지코지 섭지코지 섭지코지 섭지코지"
         place.lineBreakMode = .byWordWrapping
         place.numberOfLines = 2
         place.font = UIFont.boldSystemFont(ofSize: 30)
@@ -87,21 +88,26 @@ class CardView: UIView {
     func setupUI() {
         
         evaluationView.setEvaluation(3)
-        reviewCountLasbel.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        categoryLabel.sizeToFit()
+       // reviewCountLasbel.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        //categoryLabel.sizeToFit()
         let category = HorizontalStack(alignment: .bottom) {
             categoryLabel
             Space()
             favoriteButton.size(width: 26).size(height: 32)
+            Space().size(width: 20)
         }
 
-        let content =  VerticalStack(spacing : 16) {
+        let content = VerticalStack(spacing : 16) {
             VerticalStack(spacing: 24) {
-                
+
                 VerticalStack(spacing: 12) {
                     VerticalStack(spacing: 8) {
-                        category
-                        placeLabel
+                        category.size(height: 32)
+                        HorizontalStack {
+                            placeLabel
+                            Space().size(width: 50)
+                        }
+                        
                     }
                     explanationLabel
                     HorizontalStack(spacing: 6) {
@@ -110,8 +116,8 @@ class CardView: UIView {
                         reviewCountLasbel
                         Space()
                     }
-                    
-                }.padding(.trailing, 20)
+
+                }
                 HorizontalStack {
                     Space()
                     thumbnailView.size(height: 177).size(width: 247)
@@ -127,7 +133,7 @@ class CardView: UIView {
         .padding(.bottom, 24)
         
         
-        
+       // let content = UIImageView(image:  UIImage(named: "Card"))
         
         addSubview(content)
         content.adjustToArea()

@@ -25,8 +25,8 @@ class MainViewController: UIViewController {
     
     var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = .init(top: 20, left: 10, bottom: 0, right: 10)
-        layout.minimumLineSpacing = 30
+        layout.sectionInset = .init(top: 20, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 20
         let width = UIScreen.main.bounds.size.width
         layout.estimatedItemSize = CGSize(width: width - 20, height: 1)
         return layout

@@ -35,9 +35,14 @@ class HomeNavigationBar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        searchButton.addTarget(self, action: #selector(moveToSearch), for: .touchUpInside)
         
     }
     
+    @objc func moveToSearch() {
+        let vc = UIViewController()
+        
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

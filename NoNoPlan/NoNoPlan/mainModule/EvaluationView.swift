@@ -48,9 +48,10 @@ class EvaluationView: UIView {
         
         evaluations.forEach{
             if $0.tag <= value {
-                $0.backgroundColor = .red
+                $0.setImage(UIImage(named: "star_on"), for: .normal)
             } else {
-                $0.backgroundColor = .blue
+               
+                $0.setImage(UIImage(named: "star_off"), for: .normal)
             }
         }
     }

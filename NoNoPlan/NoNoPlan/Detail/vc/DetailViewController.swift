@@ -37,14 +37,14 @@ class DetailViewController: UIViewController {
         return view
     }()
     
-    lazy var closeBtn: UIButton = {
-        let btn = UIButton()
-        btn.frame = CGRect(x: kScreenW - 20 - 30, y: 20, width: 30, height: 30)
-        btn.backgroundColor = .red
-        // btn.setImage(#imageLiteral(resourceName: "close_button"), for: .normal)
-        btn.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
-        return btn
-    }()
+//    lazy var closeBtn: UIButton = {
+//        let btn = UIButton()
+//        btn.frame = CGRect(x: kScreenW - 20 - 30, y: 20, width: 30, height: 30)
+//        btn.backgroundColor = .red
+//        // btn.setImage(#imageLiteral(resourceName: "close_button"), for: .normal)
+//        btn.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
+//        return btn
+//    }()
     
     init(cell: CardCell) {
         self.cell = cell
@@ -72,7 +72,6 @@ class DetailViewController: UIViewController {
         self.view.backgroundColor = .white
         self.view.layer.masksToBounds = true
         view.addSubview(scrollView)
-        view.addSubview(closeBtn)
         view.addGestureRecognizer(dismissPanGesture)
         
         if #available(iOS 11.0, *) {
@@ -83,7 +82,8 @@ class DetailViewController: UIViewController {
     }
     
     private func getImageFromCell() {
-        scrollView.imageView.image = UIImage(named: "Card")
+      //  scrollView.imageView.image = UIImage(named: "Card")
+        //scroll
     }
     
     @objc private func closeAction() {
@@ -253,6 +253,7 @@ class CardPresentationController: UIPresentationController {
         presentingViewController.beginAppearanceTransition(true, animated: true)
         presentedViewController.transitionCoordinator!.animate(alongsideTransition: { (ctx) in
             self.blurView.alpha = 0.0
+            
         }, completion: nil)
     }
     
@@ -263,55 +264,6 @@ class CardPresentationController: UIPresentationController {
         }
     }
 }
-
-
-class DetailScrollView: UIScrollView {
-    
-    let bgBackView = UIView()
-    let imageView = UIImageView()
-    let textView = UITextView()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupUI()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupUI() {
-        bgBackView.frame = CGRect(x: 0, y: 0, width: kScreenW, height: GlobalConstants.cardDetailTopImageH)
-        bgBackView.layer.masksToBounds = true
-        
-        imageView.frame = bgBackView.bounds
-        imageView.isUserInteractionEnabled = true
-        imageView.contentMode = .scaleAspectFill
-        
-        let textViewWidth = kScreenW - 2 * textViewLeftMargin
-        let font = UIFont.boldSystemFont(ofSize: 15)
-        let textHeight = textViewText.calculateHeightWith(width: textViewWidth, font: font)
-        textView.frame = CGRect(x: textViewLeftMargin, y: bgBackView.frame.height + textViewTopMargin, width: textViewWidth, height: textHeight + textViewBottomMargin)
-        textView.text = textViewText
-        textView.font = font
-        textView.textColor = .gray
-        
-        bgBackView.addSubview(imageView)
-        addSubview(bgBackView)
-        addSubview(textView)
-        
-        contentSize = CGSize(width: kScreenW, height: bgBackView.frame.height + textViewTopMargin + textView.frame.height + textViewBottomMargin)
-    }
-    
-}
-
-
-fileprivate let textViewLeftMargin: CGFloat = 20
-fileprivate let textViewTopMargin: CGFloat = 40
-fileprivate let textViewBottomMargin: CGFloat = 50
-fileprivate let textViewText = "일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고 운동도하고 일도하고 프로젝트도 하고 토이프로젝트도 하고 밥도 먹고 그러다 책도 읽고 티비도 보고 영화도 보고 물도 마시고 카페도 가고 산책도 하고 놀러도 가고 호캉스도 즐기고 게임도 하고"
-
-
 
 extension UIView {
     

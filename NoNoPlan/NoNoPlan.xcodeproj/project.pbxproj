@@ -34,6 +34,7 @@
 		7B5C215523DB11C600302A2C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C215423DB11C600302A2C /* CardView.swift */; };
 		7B5C215723DB14D200302A2C /* UIColor_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C215623DB14D200302A2C /* UIColor_extension.swift */; };
 		7B5C215923DD9DF000302A2C /* EvaluationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C215823DD9DF000302A2C /* EvaluationView.swift */; };
+		7B5C215B23E03EA500302A2C /* DetailScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C215A23E03EA500302A2C /* DetailScrollView.swift */; };
 		7B8C23D423B728F1009F01E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D323B728F1009F01E1 /* AppDelegate.swift */; };
 		7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */; };
 		7B8C23DE23B728F1009F01E1 /* NoNoPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */; };
@@ -93,6 +94,7 @@
 		7B5C215423DB11C600302A2C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7B5C215623DB14D200302A2C /* UIColor_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_extension.swift; sourceTree = "<group>"; };
 		7B5C215823DD9DF000302A2C /* EvaluationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EvaluationView.swift; path = NoNoPlan/mainModule/EvaluationView.swift; sourceTree = SOURCE_ROOT; };
+		7B5C215A23E03EA500302A2C /* DetailScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScrollView.swift; sourceTree = "<group>"; };
 		7B8C23D023B728F1009F01E1 /* NoNoPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNoPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C23D323B728F1009F01E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,8 +226,8 @@
 		7B2D3E1423BE209F00430866 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				7B2D3E1223BE209100430866 /* DetailViewController.swift */,
-				7B2D3E1523BE24C600430866 /* MainAnimator.swift */,
+				7B5C215C23E03EDB00302A2C /* vc */,
+				7B5C215D23E03EEB00302A2C /* view */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -260,6 +262,22 @@
 			path = Swipe;
 			sourceTree = "<group>";
 		};
+		7B5C215C23E03EDB00302A2C /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D3E1223BE209100430866 /* DetailViewController.swift */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		7B5C215D23E03EEB00302A2C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7B5C215A23E03EA500302A2C /* DetailScrollView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		7B8C23C723B728F1009F01E1 = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +306,7 @@
 				7B8C23D323B728F1009F01E1 /* AppDelegate.swift */,
 				7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */,
 				7B35C1DC23C0AB6400667368 /* MenuController.swift */,
+				7B2D3E1523BE24C600430866 /* MainAnimator.swift */,
 				7B3AB60A23C38EFD005C450C /* Swipe */,
 				7B2D3E0123B8EB3400430866 /* Extension */,
 				7B2D3E1423BE209F00430866 /* Detail */,
@@ -553,6 +572,7 @@
 				7B3AB5FE23C3860B005C450C /* SwipeTabController.swift in Sources */,
 				7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */,
 				7B5C214B23D8600600302A2C /* VerticalStack.swift in Sources */,
+				7B5C215B23E03EA500302A2C /* DetailScrollView.swift in Sources */,
 				7B2D3E1323BE209100430866 /* DetailViewController.swift in Sources */,
 				7B5C215523DB11C600302A2C /* CardView.swift in Sources */,
 				7B5C215323D8603800302A2C /* UICollectionView_extension.swift in Sources */,

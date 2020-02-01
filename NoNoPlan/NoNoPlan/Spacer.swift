@@ -13,6 +13,11 @@ import UIKit
 class Space: UIView {
     
     
+    convenience init(color: UIColor = .white) {
+        self.init(frame: .zero)
+        self.backgroundColor = color
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.setContentHuggingPriority(.defaultLow, for: .horizontal)
