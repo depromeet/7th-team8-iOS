@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42D90FE02B7CDC0BB2B2AD69 /* Pods_NoNoPlan_NoNoPlanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2757363E441AF4FC709BA211 /* Pods_NoNoPlan_NoNoPlanUITests.framework */; };
-		78C559CE482589A2D05F0913 /* Pods_NoNoPlanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D55205F07A97B20E6F5BDB /* Pods_NoNoPlanTests.framework */; };
 		7B2D3DF923B730F700430866 /* MainViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3DF823B730F700430866 /* MainViewCotroller.swift */; };
 		7B2D3E0023B8EB2300430866 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3DFF23B8EB2300430866 /* CardCell.swift */; };
 		7B2D3E1323BE209100430866 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D3E1223BE209100430866 /* DetailViewController.swift */; };
@@ -38,37 +36,23 @@
 		7B5C218223EE7D5000302A2C /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218123EE7D5000302A2C /* ReviewViewController.swift */; };
 		7B5C218423F7D09F00302A2C /* GridImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218323F7D09F00302A2C /* GridImageViewController.swift */; };
 		7B5C218623F7DE4400302A2C /* AnotherPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218523F7DE4400302A2C /* AnotherPlaceViewController.swift */; };
+		7B5C218823FFF5C300302A2C /* lf20_1CqKbZ.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B5C218723FFF5C300302A2C /* lf20_1CqKbZ.json */; };
+		7B5C218A23FFF5EE00302A2C /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218923FFF5EE00302A2C /* LaunchViewController.swift */; };
+		7B5C218C23FFF98300302A2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218B23FFF98300302A2C /* LoginViewController.swift */; };
+		7B5C219524000DAB00302A2C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5C219424000DAB00302A2C /* Lottie */; };
+		7B5C219B24001B7500302A2C /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5C219A24001B7500302A2C /* KakaoOpenSDK.framework */; };
+		7B5C219D2400323300302A2C /* ReviewWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C219C2400323300302A2C /* ReviewWritingViewController.swift */; };
+		7B5C21A02400330000302A2C /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5C219F2400330000302A2C /* Cosmos */; };
 		7B8C23D423B728F1009F01E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D323B728F1009F01E1 /* AppDelegate.swift */; };
 		7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */; };
 		7B8C23DE23B728F1009F01E1 /* NoNoPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */; };
 		7B8C23E023B728F3009F01E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C23DF23B728F3009F01E1 /* Assets.xcassets */; };
 		7B8C23E323B728F3009F01E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C23E123B728F3009F01E1 /* LaunchScreen.storyboard */; };
-		7B8C23EE23B728F3009F01E1 /* NoNoPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23ED23B728F3009F01E1 /* NoNoPlanTests.swift */; };
-		7B8C23F923B728F3009F01E1 /* NoNoPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23F823B728F3009F01E1 /* NoNoPlanUITests.swift */; };
 		A050C400EF2D921808C39280 /* Pods_NoNoPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBAEDCD2FE5182EA5805FAF /* Pods_NoNoPlan.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7B8C23EA23B728F3009F01E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B8C23C823B728F1009F01E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8C23CF23B728F1009F01E1;
-			remoteInfo = NoNoPlan;
-		};
-		7B8C23F523B728F3009F01E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B8C23C823B728F1009F01E1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8C23CF23B728F1009F01E1;
-			remoteInfo = NoNoPlan;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		05D55205F07A97B20E6F5BDB /* Pods_NoNoPlanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoNoPlanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EBAEDCD2FE5182EA5805FAF /* Pods_NoNoPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoNoPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2757363E441AF4FC709BA211 /* Pods_NoNoPlan_NoNoPlanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoNoPlan_NoNoPlanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C467740309787C6BBAA94D3 /* Pods-NoNoPlan-NoNoPlanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoNoPlan-NoNoPlanUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoNoPlan-NoNoPlanUITests/Pods-NoNoPlan-NoNoPlanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D223D57E61BAC3CB99139F9 /* Pods-NoNoPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoNoPlan.release.xcconfig"; path = "Target Support Files/Pods-NoNoPlan/Pods-NoNoPlan.release.xcconfig"; sourceTree = "<group>"; };
 		7B2D3DF823B730F700430866 /* MainViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCotroller.swift; sourceTree = "<group>"; };
@@ -101,6 +85,13 @@
 		7B5C218123EE7D5000302A2C /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		7B5C218323F7D09F00302A2C /* GridImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageViewController.swift; sourceTree = "<group>"; };
 		7B5C218523F7DE4400302A2C /* AnotherPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherPlaceViewController.swift; sourceTree = "<group>"; };
+		7B5C218723FFF5C300302A2C /* lf20_1CqKbZ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf20_1CqKbZ.json; sourceTree = "<group>"; };
+		7B5C218923FFF5EE00302A2C /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		7B5C218B23FFF98300302A2C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7B5C21962400155400302A2C /* NoNoPlan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoNoPlan.entitlements; sourceTree = "<group>"; };
+		7B5C219924001AD000302A2C /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		7B5C219A24001B7500302A2C /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		7B5C219C2400323300302A2C /* ReviewWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWritingViewController.swift; sourceTree = "<group>"; };
 		7B8C23D023B728F1009F01E1 /* NoNoPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNoPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C23D323B728F1009F01E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,10 +99,8 @@
 		7B8C23DF23B728F3009F01E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B8C23E223B728F3009F01E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B8C23E423B728F3009F01E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B8C23E923B728F3009F01E1 /* NoNoPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoNoPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C23ED23B728F3009F01E1 /* NoNoPlanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNoPlanTests.swift; sourceTree = "<group>"; };
 		7B8C23EF23B728F3009F01E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B8C23F423B728F3009F01E1 /* NoNoPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoNoPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C23F823B728F3009F01E1 /* NoNoPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNoPlanUITests.swift; sourceTree = "<group>"; };
 		7B8C23FA23B728F3009F01E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BE7CAB6EF3F70E865DD0D9F /* Pods-NoNoPlanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoNoPlanTests.debug.xcconfig"; path = "Target Support Files/Pods-NoNoPlanTests/Pods-NoNoPlanTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,22 +121,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A050C400EF2D921808C39280 /* Pods_NoNoPlan.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B8C23E623B728F3009F01E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78C559CE482589A2D05F0913 /* Pods_NoNoPlanTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B8C23F123B728F3009F01E1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42D90FE02B7CDC0BB2B2AD69 /* Pods_NoNoPlan_NoNoPlanUITests.framework in Frameworks */,
+				7B5C219524000DAB00302A2C /* Lottie in Frameworks */,
+				7B5C21A02400330000302A2C /* Cosmos in Frameworks */,
+				7B5C219B24001B7500302A2C /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +159,7 @@
 		7B2D3DF723B7309800430866 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7B5C218723FFF5C300302A2C /* lf20_1CqKbZ.json */,
 				7B8C23DF23B728F3009F01E1 /* Assets.xcassets */,
 				7B8C23E123B728F3009F01E1 /* LaunchScreen.storyboard */,
 				7B8C23E423B728F3009F01E1 /* Info.plist */,
@@ -287,6 +264,7 @@
 		7B8C23C723B728F1009F01E1 = {
 			isa = PBXGroup;
 			children = (
+				7B5C219924001AD000302A2C /* KakaoOpenSDK-Bridging-Header.h */,
 				7B8C23D223B728F1009F01E1 /* NoNoPlan */,
 				7B8C23EC23B728F3009F01E1 /* NoNoPlanTests */,
 				7B8C23F723B728F3009F01E1 /* NoNoPlanUITests */,
@@ -300,8 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				7B8C23D023B728F1009F01E1 /* NoNoPlan.app */,
-				7B8C23E923B728F3009F01E1 /* NoNoPlanTests.xctest */,
-				7B8C23F423B728F3009F01E1 /* NoNoPlanUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,6 +285,7 @@
 		7B8C23D223B728F1009F01E1 /* NoNoPlan */ = {
 			isa = PBXGroup;
 			children = (
+				7B5C21962400155400302A2C /* NoNoPlan.entitlements */,
 				7B8C23D323B728F1009F01E1 /* AppDelegate.swift */,
 				7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */,
 				7B35C1DC23C0AB6400667368 /* MenuController.swift */,
@@ -316,6 +293,9 @@
 				7B5C218123EE7D5000302A2C /* ReviewViewController.swift */,
 				7B5C218323F7D09F00302A2C /* GridImageViewController.swift */,
 				7B5C218523F7DE4400302A2C /* AnotherPlaceViewController.swift */,
+				7B5C218923FFF5EE00302A2C /* LaunchViewController.swift */,
+				7B5C218B23FFF98300302A2C /* LoginViewController.swift */,
+				7B5C219C2400323300302A2C /* ReviewWritingViewController.swift */,
 				7B3AB60A23C38EFD005C450C /* Swipe */,
 				7B2D3E0123B8EB3400430866 /* Extension */,
 				7B2D3E1423BE209F00430866 /* Detail */,
@@ -347,9 +327,8 @@
 		BEF222C52ACA367F4CF2CB96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B5C219A24001B7500302A2C /* KakaoOpenSDK.framework */,
 				1EBAEDCD2FE5182EA5805FAF /* Pods_NoNoPlan.framework */,
-				2757363E441AF4FC709BA211 /* Pods_NoNoPlan_NoNoPlanUITests.framework */,
-				05D55205F07A97B20E6F5BDB /* Pods_NoNoPlanTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -371,47 +350,13 @@
 			dependencies = (
 			);
 			name = NoNoPlan;
+			packageProductDependencies = (
+				7B5C219424000DAB00302A2C /* Lottie */,
+				7B5C219F2400330000302A2C /* Cosmos */,
+			);
 			productName = NoNoPlan;
 			productReference = 7B8C23D023B728F1009F01E1 /* NoNoPlan.app */;
 			productType = "com.apple.product-type.application";
-		};
-		7B8C23E823B728F3009F01E1 /* NoNoPlanTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7B8C240023B728F3009F01E1 /* Build configuration list for PBXNativeTarget "NoNoPlanTests" */;
-			buildPhases = (
-				DD8B752F6F6604379C7ABF5A /* [CP] Check Pods Manifest.lock */,
-				7B8C23E523B728F3009F01E1 /* Sources */,
-				7B8C23E623B728F3009F01E1 /* Frameworks */,
-				7B8C23E723B728F3009F01E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B8C23EB23B728F3009F01E1 /* PBXTargetDependency */,
-			);
-			name = NoNoPlanTests;
-			productName = NoNoPlanTests;
-			productReference = 7B8C23E923B728F3009F01E1 /* NoNoPlanTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7B8C23F323B728F3009F01E1 /* NoNoPlanUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7B8C240323B728F3009F01E1 /* Build configuration list for PBXNativeTarget "NoNoPlanUITests" */;
-			buildPhases = (
-				7DE98661EE440A2CAFCBA7D2 /* [CP] Check Pods Manifest.lock */,
-				7B8C23F023B728F3009F01E1 /* Sources */,
-				7B8C23F123B728F3009F01E1 /* Frameworks */,
-				7B8C23F223B728F3009F01E1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B8C23F623B728F3009F01E1 /* PBXTargetDependency */,
-			);
-			name = NoNoPlanUITests;
-			productName = NoNoPlanUITests;
-			productReference = 7B8C23F423B728F3009F01E1 /* NoNoPlanUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -426,14 +371,6 @@
 					7B8C23CF23B728F1009F01E1 = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					7B8C23E823B728F3009F01E1 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 7B8C23CF23B728F1009F01E1;
-					};
-					7B8C23F323B728F3009F01E1 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 7B8C23CF23B728F1009F01E1;
-					};
 				};
 			};
 			buildConfigurationList = 7B8C23CB23B728F1009F01E1 /* Build configuration list for PBXProject "NoNoPlan" */;
@@ -445,13 +382,15 @@
 				Base,
 			);
 			mainGroup = 7B8C23C723B728F1009F01E1;
+			packageReferences = (
+				7B5C219324000DAB00302A2C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				7B5C219E2400330000302A2C /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 7B8C23D123B728F1009F01E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7B8C23CF23B728F1009F01E1 /* NoNoPlan */,
-				7B8C23E823B728F3009F01E1 /* NoNoPlanTests */,
-				7B8C23F323B728F3009F01E1 /* NoNoPlanUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -463,22 +402,9 @@
 			files = (
 				7B3AB60823C388BE005C450C /* TabCollectionCell.xib in Resources */,
 				7B8C23E323B728F3009F01E1 /* LaunchScreen.storyboard in Resources */,
+				7B5C218823FFF5C300302A2C /* lf20_1CqKbZ.json in Resources */,
 				7B3AB60923C388BE005C450C /* TabView.xib in Resources */,
 				7B8C23E023B728F3009F01E1 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B8C23E723B728F3009F01E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B8C23F223B728F3009F01E1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,50 +433,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7DE98661EE440A2CAFCBA7D2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NoNoPlan-NoNoPlanUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DD8B752F6F6604379C7ABF5A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NoNoPlanTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -561,14 +443,17 @@
 				7B5C215923DD9DF000302A2C /* EvaluationView.swift in Sources */,
 				7B5C214F23D8600600302A2C /* UIView.swift in Sources */,
 				7B5C218223EE7D5000302A2C /* ReviewViewController.swift in Sources */,
+				7B5C219D2400323300302A2C /* ReviewWritingViewController.swift in Sources */,
 				7B5C213523CDE15200302A2C /* HomeNavigationBar.swift in Sources */,
 				7B5C214D23D8600600302A2C /* UIStackView.swift in Sources */,
 				7B2D3E0023B8EB2300430866 /* CardCell.swift in Sources */,
 				7B35C1DD23C0AB6400667368 /* MenuController.swift in Sources */,
+				7B5C218A23FFF5EE00302A2C /* LaunchViewController.swift in Sources */,
 				7B3AB60423C3860B005C450C /* TabPageOption.swift in Sources */,
 				7B5C218423F7D09F00302A2C /* GridImageViewController.swift in Sources */,
 				7B5C214C23D8600600302A2C /* HorizontalStack.swift in Sources */,
 				7B5C215723DB14D200302A2C /* UIColor_extension.swift in Sources */,
+				7B5C218C23FFF98300302A2C /* LoginViewController.swift in Sources */,
 				7B5C214E23D8600600302A2C /* Text.swift in Sources */,
 				7B2D3DF923B730F700430866 /* MainViewCotroller.swift in Sources */,
 				7B5C215123D8600600302A2C /* Image.swift in Sources */,
@@ -591,36 +476,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B8C23E523B728F3009F01E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B8C23EE23B728F3009F01E1 /* NoNoPlanTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B8C23F023B728F3009F01E1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B8C23F923B728F3009F01E1 /* NoNoPlanUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7B8C23EB23B728F3009F01E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B8C23CF23B728F1009F01E1 /* NoNoPlan */;
-			targetProxy = 7B8C23EA23B728F3009F01E1 /* PBXContainerItemProxy */;
-		};
-		7B8C23F623B728F3009F01E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B8C23CF23B728F1009F01E1 /* NoNoPlan */;
-			targetProxy = 7B8C23F523B728F3009F01E1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7B8C23E123B728F3009F01E1 /* LaunchScreen.storyboard */ = {
@@ -637,6 +493,7 @@
 		7B8C23FB23B728F3009F01E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -688,8 +545,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -697,6 +556,7 @@
 		7B8C23FC23B728F3009F01E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -741,8 +601,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -753,13 +615,19 @@
 			baseConfigurationReference = DFCA57C7F1334C26E84B912B /* Pods-NoNoPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NoNoPlan/NoNoPlan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB46A3BWSY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/NoNoPlan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.life.NoNoPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -772,105 +640,23 @@
 			baseConfigurationReference = 6D223D57E61BAC3CB99139F9 /* Pods-NoNoPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NoNoPlan/NoNoPlan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SB46A3BWSY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/NoNoPlan/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.life.NoNoPlan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		7B8C240123B728F3009F01E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D53FA7C8C51C3E5F51044E88 /* Pods-NoNoPlanTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SB46A3BWSY;
-				INFOPLIST_FILE = NoNoPlanTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.life.NoNoPlanTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoNoPlan.app/NoNoPlan";
-			};
-			name = Debug;
-		};
-		7B8C240223B728F3009F01E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4BE7E84C3CA5471D7C02480 /* Pods-NoNoPlanTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SB46A3BWSY;
-				INFOPLIST_FILE = NoNoPlanTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.life.NoNoPlanTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoNoPlan.app/NoNoPlan";
-			};
-			name = Release;
-		};
-		7B8C240423B728F3009F01E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D264AD952D5D1F76AF9A5463 /* Pods-NoNoPlan-NoNoPlanUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SB46A3BWSY;
-				INFOPLIST_FILE = NoNoPlanUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.life.NoNoPlanUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoNoPlan;
-			};
-			name = Debug;
-		};
-		7B8C240523B728F3009F01E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8804F189E4BDD2BE0059D3C1 /* Pods-NoNoPlan-NoNoPlanUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SB46A3BWSY;
-				INFOPLIST_FILE = NoNoPlanUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.life.NoNoPlanUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoNoPlan;
 			};
 			name = Release;
 		};
@@ -895,25 +681,39 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B8C240023B728F3009F01E1 /* Build configuration list for PBXNativeTarget "NoNoPlanTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B8C240123B728F3009F01E1 /* Debug */,
-				7B8C240223B728F3009F01E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7B8C240323B728F3009F01E1 /* Build configuration list for PBXNativeTarget "NoNoPlanUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B8C240423B728F3009F01E1 /* Debug */,
-				7B8C240523B728F3009F01E1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B5C219324000DAB00302A2C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		7B5C219E2400330000302A2C /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 21.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B5C219424000DAB00302A2C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5C219324000DAB00302A2C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		7B5C219F2400330000302A2C /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B5C219E2400330000302A2C /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */ = {

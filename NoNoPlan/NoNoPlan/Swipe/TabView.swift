@@ -36,7 +36,7 @@ internal class TabView: UIView {
     @IBOutlet fileprivate weak var currentBarView: UIView!
     @IBOutlet fileprivate weak var currentBarViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate weak var currentBarViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet fileprivate weak var bottomBarViewHeightConstraint: NSLayoutConstraint!
+   
 
     init(isInfinity: Bool, option: TabPageOption) {
        super.init(frame: CGRect.zero)
@@ -113,7 +113,7 @@ internal class TabView: UIView {
             collectionView.addConstraints([top, left])
         }
 
-        bottomBarViewHeightConstraint.constant = 1.0 / UIScreen.main.scale
+//        bottomBarViewHeightConstraint.constant = 1.0 / UIScreen.main.scale
     }
 
     required internal init?(coder aDecoder: NSCoder) {

@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.isHidden = true
         self.view.backgroundColor = .white
         //view.addSubview(navigationBar)

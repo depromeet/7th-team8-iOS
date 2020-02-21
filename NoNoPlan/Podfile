@@ -6,14 +6,7 @@ target 'NoNoPlan' do
   use_frameworks!
 
   # Pods for NoNoPlan
+	
 
-  target 'NoNoPlanTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'NoNoPlanUITests' do
-    # Pods for testing
-  end
 
 end

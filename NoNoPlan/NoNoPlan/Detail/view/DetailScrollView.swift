@@ -10,6 +10,7 @@ import UIKit
 
 protocol DetailScrollDelegate {
     func moveDetail()
+    func moveReviewWriting()
 }
 
 class DetailScrollView: UIScrollView {
@@ -58,7 +59,7 @@ class DetailScrollView: UIScrollView {
         return businessHoursDetail
     }()
     
-    var reviewButton: UIButton = {
+   lazy var reviewButton: UIButton = {
         let review = UIButton()
         review.setTitle("리뷰작성하기", for: .normal)
         review.backgroundColor = UIColor(r: 241, g: 241, b: 241)
@@ -67,6 +68,7 @@ class DetailScrollView: UIScrollView {
         
         review.setTitleColor(.black, for:.normal)
         review.titleEdgeInsets = UIEdgeInsets(top: 12, left: 26, bottom: 12, right: 26)
+    
         return review
     }()
     
@@ -88,8 +90,13 @@ class DetailScrollView: UIScrollView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        reviewButton.addTarget(self, action: #selector(reiviewWriting), for: .touchUpInside)
     }
     
+    @objc func reiviewWriting() {
+        
+        detailScrollDelegate?.moveReviewWriting()
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

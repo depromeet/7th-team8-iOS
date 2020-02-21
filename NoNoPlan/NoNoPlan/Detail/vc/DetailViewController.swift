@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class DetailViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
@@ -214,6 +216,12 @@ extension DetailViewController: UIGestureRecognizerDelegate {
 }
 
 extension DetailViewController: DetailScrollDelegate {
+    func moveReviewWriting() {
+        let review = ReviewWritingViewController()
+        review.titleString = scrollView.cardView.placeLabel.text ?? ""
+        self.navigationController?.pushViewController(review, animated: true)
+    }
+    
     
     func moveDetail() {
         self.navigationController?.pushViewController(ReviewViewController(), animated: true)

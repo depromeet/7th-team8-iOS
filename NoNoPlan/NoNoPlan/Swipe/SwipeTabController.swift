@@ -144,12 +144,14 @@ class SwipeTabController: UIViewController {
     
     fileprivate func configuredTabView() -> TabView {
         var button = UIButton.init()
-        button.backgroundColor = .red
+        
+        button.setImage(UIImage(named: "profile"), for: .normal)
         var button2 = UIButton.init()
-        button2.backgroundColor = .blue
+        button2.setImage(UIImage(named: "search"), for: .normal)
         let tabView = TabView(isInfinity: isInfinity, option: option)
         tabView.translatesAutoresizingMaskIntoConstraints = false
-        
+        tabView.backgroundColor = UIColor(r: 252, g: 252, b: 252)
+        tabView.contentView.backgroundColor = UIColor(r: 252, g: 252, b: 252)
 //        let height = NSLayoutConstraint(item: tabView,
 //                                        attribute: .height,
 //                                        relatedBy: .equal,

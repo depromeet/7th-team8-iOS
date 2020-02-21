@@ -1,6 +1,0 @@
-framework module Pods_NoNoPlanTests {
-  umbrella header "Pods-NoNoPlanTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
