@@ -100,7 +100,7 @@ internal class TabView: UIView {
                 toItem: collectionView,
                 attribute: .top,
                 multiplier: 1.0,
-                constant: 10)
+                constant: 30)
                 ///checkcheck
             let left = NSLayoutConstraint(item: currentBarView,
                 attribute: .leading,

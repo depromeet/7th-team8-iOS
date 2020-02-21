@@ -12,10 +12,10 @@ class HorizontalStack: UIStackView {
     
     
     
-    convenience init(axis: NSLayoutConstraint.Axis = .horizontal, alignment: UIStackView.Alignment = .fill, spacing: CGFloat? = nil, @ViewArrayBuilder _ content: () -> UIStackView) {
+    convenience init(axis: NSLayoutConstraint.Axis = .horizontal, alignment: UIStackView.Alignment = .fill, distribution: UIStackView.Distribution = .fill, spacing: CGFloat? = nil, @ViewArrayBuilder _ content: () -> UIStackView) {
         self.init(arrangedSubviews: content().arrangedSubviews)
         self.axis = axis
-        self.distribution = .fill
+        self.distribution = distribution
         self.alignment = alignment
         self.spacing = spacing ?? 0.0
     }

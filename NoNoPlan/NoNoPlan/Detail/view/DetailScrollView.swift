@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol DetailScrollDelegate {
+    func moveDetail()
+}
+
 class DetailScrollView: UIScrollView {
     
    // let bgBackView = UIView()
+    var detailScrollDelegate: DetailScrollDelegate? = nil
     let cardView = CardView()
     let textView = UITextView()
     let callButton: UIButton = {
@@ -53,6 +58,32 @@ class DetailScrollView: UIScrollView {
         return businessHoursDetail
     }()
     
+    var reviewButton: UIButton = {
+        let review = UIButton()
+        review.setTitle("리뷰작성하기", for: .normal)
+        review.backgroundColor = UIColor(r: 241, g: 241, b: 241)
+        review.layer.cornerRadius = 4
+        review.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
+        
+        review.setTitleColor(.black, for:.normal)
+        review.titleEdgeInsets = UIEdgeInsets(top: 12, left: 26, bottom: 12, right: 26)
+        return review
+    }()
+    
+    lazy var reviewAreaView: ReviewViewController = {
+        let review = ReviewViewController()
+        review.view.frame = UIScreen.main.bounds
+        review.loadViewIfNeeded()
+        //  review.collectionView.isScrollEnabled = false
+        return review
+    }()
+    
+    lazy var gridImageAreaView: GridImageViewController  = {
+        let gridImageView = GridImageViewController()
+        gridImageView.view.frame = UIScreen.main.bounds
+        gridImageView.loadViewIfNeeded()
+        return gridImageView
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -89,8 +120,27 @@ class DetailScrollView: UIScrollView {
     
         let v3 = UIView()
        
-
+        self.layoutIfNeeded()
+             
+        
+        reviewAreaView.collectionView.layoutIfNeeded()
+        reviewAreaView.collectionView.layoutSubviews()
+        
+        reviewAreaView.collectionView.reloadDataWithCompletion {
+            let height = self.reviewAreaView.collectionView.collectionViewLayout.collectionViewContentSize.height
+                   
+                  self.reviewAreaView.view.size(height: self.reviewAreaView.collectionView.contentSize.height)
+        }
+        reviewAreaView.collectionView.collectionViewLayout.invalidateLayout()
+       
+        reviewAreaView.collectionView.performBatchUpdates({
+            
+        }) { _  in
+            
+        }
+        
     }
+    
     
     func bottomArea() -> UIView {
         let t =  Text("dkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;ldsadkdkdksdkas;ldksa;;")
@@ -110,15 +160,17 @@ class DetailScrollView: UIScrollView {
                             textArea(title: "가는길", content: "제주특별자치도 제주시 한림읍 수원7길 42 (우)63023")
                             textArea(title: "영업시간", content: "월,화,수,금,토,일 11:00 ~ 20:00\n월,화,수,금 브레이크타임 15:00 ~ 16:00")
                             textArea(title: "상세정보", content: "제주맛집, 활전복 해물탕, 활전복뚝배기, 전복죽, 조림, 구이전문, SBS방영 맛집<12.04.29>\n\n아침식사 예약시 9시가능\n*예약필수 입니다")
-                        }.padding(.trailing, 25)
-                        Space(color: .blue).size(height: 100)
+                        }
+                        gridImageAreaView.view.size(height: 100)
                         reviewArea()
                     }
                 }
      
             }
         }
+     
     }
+    
     
     
     func textArea(title: String, content: String) -> UIView {
@@ -136,36 +188,54 @@ class DetailScrollView: UIScrollView {
             contentLabel
         }
     }
-    
-    
-    
-    
-    var reviewButton: UIButton = {
-       let review = UIButton()
-        review.setTitle("리뷰작성하기", for: .normal)
-        review.backgroundColor = UIColor(r: 241, g: 241, b: 241)
-        review.layer.cornerRadius = 4
-        review.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
-       
-        review.setTitleColor(.black, for:.normal)
-        review.titleEdgeInsets = UIEdgeInsets(top: 12, left: 26, bottom: 12, right: 26)
-        return review
+ 
+    let reviewLabel: UILabel = {
+        let reviewLabel = UILabel()
+        reviewLabel.text = "리뷰"
+        reviewLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        return reviewLabel
     }()
-    
+    let evaluationView = EvaluationView()
     func reviewArea() -> UIView {
         let backView = UIView()
-        
-        return VerticalStack(spacing: 42) {
-            HorizontalStack(spacing: 1) {
+        let button = UIButton()
+        evaluationView.setEvaluation(4)
+        button.backgroundColor = .init(r: 241, g: 241, b: 241)
+        button.setTitle("리뷰 더보기", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(moveToReview), for: .touchUpInside)
+        let buttonBackground = UIView()
+        button.cornerRadius = 10
+        button.layer.masksToBounds = true
+        button.backgroundColor = UIColor(r: 241, g: 241, b: 241)
+//        buttonBackground.addSubview(button)
+//        button.centerXAnchor.constraint(equalTo: buttonBackground.centerXAnchor).isActive = true
+//        button.centerYAnchor.constraint(equalTo: buttonBackground.centerYAnchor).isActive = true
+//        b
+        return VerticalStack {
+            VerticalStack(spacing: 42) {
                 reviewClickArea()
-                Space().size(width: 19)
+                VerticalStack(spacing: 0) {
+                    reviewLabel
+                    Space(color: UIColor(r: 234, g: 234, b: 234)).size(height: 1)
+                }.size(height: 50)
             }
-                
             
-            Space(color: .red).size(height: 200)
+            Space().size(height: 10)
+            VerticalStack(spacing: 24) {
+                reviewAreaView.view
+                
+                HorizontalStack {
+                    Space()
+                    button.size(height: 32)
+                    .size(width: 101)
+                }
+                
+            }
             anotherPlace()
-        }
-        
+        }.padding(.trailing, 25)
+  
         
     }
     
@@ -190,7 +260,6 @@ class DetailScrollView: UIScrollView {
             
         }.padding(.leading, 20)
         .padding(.top, 20)
-        .padding(.trailing, 20)
         .padding(.bottom, 20)
         
         backgroundView.addSubview(reviewStack)
@@ -199,7 +268,7 @@ class DetailScrollView: UIScrollView {
         return backgroundView
     }
     
-    
+    let anotherPlaceArea = AnotherPlaceViewController()
     func anotherPlace() -> UIView {
         
         let label = UILabel()
@@ -208,9 +277,31 @@ class DetailScrollView: UIScrollView {
         
         return VerticalStack(spacing: 18) {
             label
-            Space(color: .green).size(height: 195)
+            anotherPlaceArea.view.size(height: 200)
+            
         }
     }
     
+    @objc func moveToReview() {
+        
+        self.detailScrollDelegate?.moveDetail()
+    }
     
+}
+
+
+class CustomCollectionView: UICollectionView {
+    var reloadDataCompleteHandler: (() -> Void)?
+    
+    func reloadDataWithCompletion(_ completion: @escaping () -> Void) {
+        reloadDataCompleteHandler = completion
+        super.reloadData()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if let block = self.reloadDataCompleteHandler {
+            block()
+        }
+    }
 }

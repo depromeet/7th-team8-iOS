@@ -20,8 +20,8 @@ class Space: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        self.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        self.setContentHuggingPriority(.defaultLow, for: .vertical)
+//        self.setContentHuggingPriority(.defaultLow, for: .horizontal)
+//        self.setContentHuggingPriority(.defaultLow, for: .vertical)
     }
     
     required init?(coder: NSCoder) {

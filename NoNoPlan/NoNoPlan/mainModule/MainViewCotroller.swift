@@ -84,13 +84,13 @@ extension MainViewController: UICollectionViewDelegate {
         
         guard let cell = collectionView.cellForItem(at: indexPath) as? CardCell else { return }
         selectedCell = cell
+         
+        let detailVC = CustomNavigationController(rootViewController: DetailViewController(cell: cell))
         
-        let detailVC = DetailViewController(cell: cell)
-        
-        detailVC.dismissClosure = { [weak self] in
-            guard let StrongSelf = self else { return }
-//            StrongSelf.updateStatusBarAndTabbarFrame(visible: true)
-        }
+//        detailVC.viewControllers.first?.dismissClosure = { [weak self] in
+//            guard let StrongSelf = self else { return }
+////            StrongSelf.updateStatusBarAndTabbarFrame(visible: true)
+//        }
          present(detailVC, animated: true, completion: nil)
     }
 }

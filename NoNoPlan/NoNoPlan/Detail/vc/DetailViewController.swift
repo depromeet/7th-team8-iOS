@@ -34,17 +34,11 @@ class DetailViewController: UIViewController {
         let frame = self.view.bounds
         let view = DetailScrollView(frame: frame)
         view.delegate = self
+        view.detailScrollDelegate = self
+        
         return view
     }()
     
-//    lazy var closeBtn: UIButton = {
-//        let btn = UIButton()
-//        btn.frame = CGRect(x: kScreenW - 20 - 30, y: 20, width: 30, height: 30)
-//        btn.backgroundColor = .red
-//        // btn.setImage(#imageLiteral(resourceName: "close_button"), for: .normal)
-//        btn.addTarget(self, action: #selector(closeAction), for: .touchUpInside)
-//        return btn
-//    }()
     
     init(cell: CardCell) {
         self.cell = cell
@@ -55,6 +49,7 @@ class DetailViewController: UIViewController {
     private func setupTranstion() {
         modalPresentationStyle = .custom
         transitioningDelegate = self
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,6 +74,21 @@ class DetailViewController: UIViewController {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewDidDisappear(animated)
     }
     
     private func getImageFromCell() {
@@ -203,23 +213,12 @@ extension DetailViewController: UIGestureRecognizerDelegate {
     }
 }
 
-//import SwiftUI
-//
-//struct detailView: PreviewProvider {
-//    static var previews: some View {
-//        ContainerView().edgesIgnoringSafeArea(.all)
-//    }
-//
-//    struct ContainerView: UIViewControllerRepresentable {
-//
-//        func makeUIViewController(context: UIViewControllerRepresentableContext<detailView.ContainerView>) -> UIViewController {
-//            return UINavigationController (rootViewController: DetailViewController())
-//        }
-//        func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<detailView.ContainerView>) {
-//
-//        }
-//    }
-//}
+extension DetailViewController: DetailScrollDelegate {
+    
+    func moveDetail() {
+        self.navigationController?.pushViewController(ReviewViewController(), animated: true)
+    }
+}
 
 
 

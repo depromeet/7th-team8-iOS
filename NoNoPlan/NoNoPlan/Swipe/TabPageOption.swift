@@ -22,7 +22,7 @@ public struct TabPageOption {
     public var titleColor = UIColor(red: 105/255, green: 182/255, blue: 245/255, alpha: 1.0)
     public var currentColor = UIColor(red: 105/255, green: 182/255, blue: 245/255, alpha: 1.0)
     public var defaultColor = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1.0)
-    public var tabHeight: CGFloat = 56.0
+    public var tabHeight: CGFloat = 63.0
     public var tabMargin: CGFloat = 20.0
     public var tabWidth: CGFloat?
     public var currentBarHeight: CGFloat = 2.0

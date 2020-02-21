@@ -35,6 +35,9 @@
 		7B5C215723DB14D200302A2C /* UIColor_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C215623DB14D200302A2C /* UIColor_extension.swift */; };
 		7B5C215923DD9DF000302A2C /* EvaluationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C215823DD9DF000302A2C /* EvaluationView.swift */; };
 		7B5C215B23E03EA500302A2C /* DetailScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C215A23E03EA500302A2C /* DetailScrollView.swift */; };
+		7B5C218223EE7D5000302A2C /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218123EE7D5000302A2C /* ReviewViewController.swift */; };
+		7B5C218423F7D09F00302A2C /* GridImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218323F7D09F00302A2C /* GridImageViewController.swift */; };
+		7B5C218623F7DE4400302A2C /* AnotherPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5C218523F7DE4400302A2C /* AnotherPlaceViewController.swift */; };
 		7B8C23D423B728F1009F01E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D323B728F1009F01E1 /* AppDelegate.swift */; };
 		7B8C23D623B728F1009F01E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */; };
 		7B8C23DE23B728F1009F01E1 /* NoNoPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B8C23DC23B728F1009F01E1 /* NoNoPlan.xcdatamodeld */; };
@@ -95,6 +98,9 @@
 		7B5C215623DB14D200302A2C /* UIColor_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_extension.swift; sourceTree = "<group>"; };
 		7B5C215823DD9DF000302A2C /* EvaluationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EvaluationView.swift; path = NoNoPlan/mainModule/EvaluationView.swift; sourceTree = SOURCE_ROOT; };
 		7B5C215A23E03EA500302A2C /* DetailScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScrollView.swift; sourceTree = "<group>"; };
+		7B5C218123EE7D5000302A2C /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		7B5C218323F7D09F00302A2C /* GridImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageViewController.swift; sourceTree = "<group>"; };
+		7B5C218523F7DE4400302A2C /* AnotherPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherPlaceViewController.swift; sourceTree = "<group>"; };
 		7B8C23D023B728F1009F01E1 /* NoNoPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoNoPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8C23D323B728F1009F01E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +313,9 @@
 				7B8C23D523B728F1009F01E1 /* SceneDelegate.swift */,
 				7B35C1DC23C0AB6400667368 /* MenuController.swift */,
 				7B2D3E1523BE24C600430866 /* MainAnimator.swift */,
+				7B5C218123EE7D5000302A2C /* ReviewViewController.swift */,
+				7B5C218323F7D09F00302A2C /* GridImageViewController.swift */,
+				7B5C218523F7DE4400302A2C /* AnotherPlaceViewController.swift */,
 				7B3AB60A23C38EFD005C450C /* Swipe */,
 				7B2D3E0123B8EB3400430866 /* Extension */,
 				7B2D3E1423BE209F00430866 /* Detail */,
@@ -551,11 +560,13 @@
 			files = (
 				7B5C215923DD9DF000302A2C /* EvaluationView.swift in Sources */,
 				7B5C214F23D8600600302A2C /* UIView.swift in Sources */,
+				7B5C218223EE7D5000302A2C /* ReviewViewController.swift in Sources */,
 				7B5C213523CDE15200302A2C /* HomeNavigationBar.swift in Sources */,
 				7B5C214D23D8600600302A2C /* UIStackView.swift in Sources */,
 				7B2D3E0023B8EB2300430866 /* CardCell.swift in Sources */,
 				7B35C1DD23C0AB6400667368 /* MenuController.swift in Sources */,
 				7B3AB60423C3860B005C450C /* TabPageOption.swift in Sources */,
+				7B5C218423F7D09F00302A2C /* GridImageViewController.swift in Sources */,
 				7B5C214C23D8600600302A2C /* HorizontalStack.swift in Sources */,
 				7B5C215723DB14D200302A2C /* UIColor_extension.swift in Sources */,
 				7B5C214E23D8600600302A2C /* Text.swift in Sources */,
@@ -575,6 +586,7 @@
 				7B5C215B23E03EA500302A2C /* DetailScrollView.swift in Sources */,
 				7B2D3E1323BE209100430866 /* DetailViewController.swift in Sources */,
 				7B5C215523DB11C600302A2C /* CardView.swift in Sources */,
+				7B5C218623F7DE4400302A2C /* AnotherPlaceViewController.swift in Sources */,
 				7B5C215323D8603800302A2C /* UICollectionView_extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
